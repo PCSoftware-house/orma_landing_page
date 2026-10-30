@@ -241,7 +241,7 @@ export default function FeatureGrid() {
           Piattaforma essenziale
         </p>
         <h2 className="mt-3 text-3xl font-medium tracking-[-0.04em] text-ink sm:text-4xl">
-          Quattro pilastri. Zero fronzoli.
+          Quattro pilastri principali.
         </h2>
         <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-muted">
           Niente centralini complessi o funzioni inutili. Soltanto gli strumenti che servono
