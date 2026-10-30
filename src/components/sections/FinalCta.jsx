@@ -1,7 +1,7 @@
 import { Mail, Phone } from 'lucide-react'
 
-const PHONE_DISPLAY = '+39 06 8765 4321'
-const PHONE_TEL = '+390687654321'
+const PHONE_DISPLAY = '+393348545132'
+const PHONE_TEL = '+393348545132'
 
 export default function FinalCta() {
   return (
@@ -14,17 +14,14 @@ export default function FinalCta() {
           Chiamaci per prenotare una dimostrazione dal vivo o per richiedere l&apos;attivazione per la
           tua struttura.
         </p>
-        <p className="mx-auto mt-3 max-w-lg text-[13px] leading-relaxed text-[#A1A1AA]">
-          Contattaci per maggiori informazioni e per richiedere una prova personalizzata sul tuo locale.
-        </p>
         <div className="mx-auto mt-8 flex w-full max-w-sm flex-col items-stretch gap-3">
           <a href={`tel:${PHONE_TEL}`} className="btn-primary !h-11 !px-5">
             <Phone className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
             Chiamaci · {PHONE_DISPLAY}
           </a>
-          <a href="mailto:info@orma.com" className="btn-primary !h-11 !px-5">
+          <a href="mailto:pcsoftware875@gmail.com" className="btn-primary !h-11 !px-5">
             <Mail className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
-            Scrivici · info@orma.com
+            Scrivici · pcsoftware875@gmail.com
           </a>
         </div>
       </div>
