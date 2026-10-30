@@ -66,13 +66,22 @@ export default function Footer() {
           <p className="text-[12px] text-faint">
             Orma è un progetto software sviluppato da PC Software. Attività in fase di costituzione.
           </p>
-          <button
-            type="button"
-            onClick={() => setPrivacyOpen(true)}
-            className="text-left text-[12px] text-muted transition hover:text-ink"
-          >
-            Privacy Policy
-          </button>
+          <div className="flex gap-4">
+            <button
+              type="button"
+              onClick={() => setPrivacyOpen(true)}
+              className="text-left text-[12px] text-muted transition hover:text-ink"
+            >
+              Privacy Policy
+            </button>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event('open-cookie-settings'))}
+              className="text-left text-[12px] text-muted transition hover:text-ink"
+            >
+              Preferenze Cookie
+            </button>
+          </div>
         </div>
       </div>
       <PrivacyPolicyModal open={privacyOpen} onClose={() => setPrivacyOpen(false)} />

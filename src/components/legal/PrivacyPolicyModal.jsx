@@ -48,7 +48,11 @@ export default function PrivacyPolicyModal({ open, onClose }) {
             I dati inviati tramite i canali di contatto sono usati esclusivamente per rispondere alle
             richieste di informazioni e non vengono ceduti a terzi.
           </p>
-          <p>Il sito non fa uso di cookie di profilazione o tracciamento di terze parti.</p>
+          <p>
+            I cookie tecnici restano sempre attivi. I cookie analitici di Google Analytics partono solo
+            dopo il consenso e servono a misurare il traffico in forma aggregata. Non usiamo cookie di
+            profilazione pubblicitaria.
+          </p>
         </div>
       </div>
     </div>

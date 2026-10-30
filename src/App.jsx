@@ -1,3 +1,4 @@
+import CookieBanner from './components/legal/CookieBanner'
 import BackgroundGlow from './components/layout/BackgroundGlow'
 import Footer from './components/layout/Footer'
 import Navbar from './components/layout/Navbar'
@@ -22,6 +23,7 @@ export default function App() {
         <FinalCta />
       </main>
       <Footer />
+      <CookieBanner />
     </div>
   )
 }
