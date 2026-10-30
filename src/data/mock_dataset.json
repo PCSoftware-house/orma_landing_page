@@ -1,0 +1,801 @@
+{
+  "tenant_name": "Locale di prova",
+  "exported_at": "2026-10-30T10:04:19+01:00",
+  "zones": [
+    {
+      "id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "name": "Sala Principale",
+      "pos_x": 40,
+      "pos_y": 240,
+      "width": 740,
+      "height": 480
+    },
+    {
+      "id": "0752be55-831a-483a-9c07-7ce9d0db4468",
+      "name": "Esterno 1",
+      "pos_x": 40,
+      "pos_y": 40,
+      "width": 250,
+      "height": 200
+    },
+    {
+      "id": "6bf38218-b601-43e0-afc7-99c405705820",
+      "name": "Esterno 2",
+      "pos_x": 290,
+      "pos_y": 40,
+      "width": 250,
+      "height": 200
+    },
+    {
+      "id": "ff100040-167e-4fc9-bb59-1cad8fc0d00b",
+      "name": "Esterno 3",
+      "pos_x": 540,
+      "pos_y": 40,
+      "width": 240,
+      "height": 200
+    },
+    {
+      "id": "dc103487-8842-4528-92c0-7d866aa6ebcf",
+      "name": "Esterno 4",
+      "pos_x": 780,
+      "pos_y": 40,
+      "width": 240,
+      "height": 680
+    }
+  ],
+  "tables": [
+    {
+      "id": "4f0f93d4-3bb0-4821-b0ae-2cdc54b7fe72",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 101,
+      "name": "Tavolo 101",
+      "capacity": 2,
+      "rotation": 0,
+      "pos_x": 15.63,
+      "pos_y": 14.99,
+      "width": 42,
+      "height": 42,
+      "status": "occupato"
+    },
+    {
+      "id": "477fb8a7-fe65-414c-8774-b2f4a78df1ee",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 102,
+      "name": "Tavolo 102",
+      "capacity": 2,
+      "rotation": 0,
+      "pos_x": 15.76,
+      "pos_y": 75.3,
+      "width": 42,
+      "height": 42,
+      "status": "occupato"
+    },
+    {
+      "id": "72dc02cc-a7ee-46ae-9f20-8ca7528fb7b4",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 103,
+      "name": "Tavolo 103",
+      "capacity": 2,
+      "rotation": 0,
+      "pos_x": 15.67,
+      "pos_y": 142.47,
+      "width": 42,
+      "height": 42,
+      "status": "partito"
+    },
+    {
+      "id": "55e8b89c-c333-4f0f-a211-65f1727a9492",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 105,
+      "name": "Tavolo 105",
+      "capacity": 2,
+      "rotation": 0,
+      "pos_x": 74.93,
+      "pos_y": 241.15,
+      "width": 42,
+      "height": 42,
+      "status": "libero"
+    },
+    {
+      "id": "a3a96011-749c-4a84-abea-c9d8abf05d7a",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 106,
+      "name": "Tavolo 106",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 276.12,
+      "pos_y": 39.6,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "fd789099-24c3-472b-8fb4-b03a300c7e48",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 107,
+      "name": "Tavolo 107",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 376.12,
+      "pos_y": 38.72,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "51dd59b4-caac-413d-bb4c-728c4e7387bf",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 108,
+      "name": "Tavolo 108",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 474.12,
+      "pos_y": 36.89,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "7cbb27d0-7497-4d69-b936-e9a9cdca855b",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 109,
+      "name": "Tavolo 109",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 564.82,
+      "pos_y": 37.47,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "44efe66a-320f-447e-a30d-8d828be2666b",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 110,
+      "name": "Tavolo 110",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 262.75,
+      "pos_y": 189.69,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "528cb81e-afd7-479e-9036-dce8c1a84de0",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 111,
+      "name": "Tavolo 111",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 355.13,
+      "pos_y": 187.99,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "b22f5092-e9d7-410d-978f-d6ed746e0225",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 112,
+      "name": "Tavolo 112",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 447.12,
+      "pos_y": 190.85,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "a9d71ad8-d07c-451a-b8be-11e0ebe7283d",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 113,
+      "name": "Tavolo 113",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 538.9,
+      "pos_y": 195.18,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "7d82355d-711e-496f-bda8-312537063d1b",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 114,
+      "name": "Tavolo 114",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 638.53,
+      "pos_y": 195.18,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "183f81b9-68f9-4500-8e7a-ba5d3ce0bc18",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 115,
+      "name": "Tavolo 115",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 350.33,
+      "pos_y": 387.51,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "4efa397d-7668-4759-932d-8ecbcbbeba58",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 116,
+      "name": "Tavolo 116",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 453.82,
+      "pos_y": 388.95,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "5736dc6c-d909-4a87-93f5-f1ba139aff0a",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 117,
+      "name": "Tavolo 117",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 550.63,
+      "pos_y": 386.86,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "13c32279-7a38-42d8-812f-d6977de28431",
+      "zone_id": "9872f572-7895-4c40-a646-8c8a7476539a",
+      "table_number": 118,
+      "name": "Tavolo 118",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 652.95,
+      "pos_y": 389.71,
+      "width": 45,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "9c948d50-bd44-4052-944a-d4c3970c138e",
+      "zone_id": "0752be55-831a-483a-9c07-7ce9d0db4468",
+      "table_number": 201,
+      "name": "Tavolo 201",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 30,
+      "pos_y": 40,
+      "width": 45,
+      "height": 65,
+      "status": "libero"
+    },
+    {
+      "id": "b7471045-6576-4c2c-b2ba-c5a12c7c933e",
+      "zone_id": "0752be55-831a-483a-9c07-7ce9d0db4468",
+      "table_number": 202,
+      "name": "Tavolo 202",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 142.46,
+      "pos_y": 112.52,
+      "width": 65,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "a4835515-a60d-4627-ac3f-3ea437dbc60d",
+      "zone_id": "6bf38218-b601-43e0-afc7-99c405705820",
+      "table_number": 301,
+      "name": "Tavolo 301",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 29.49,
+      "pos_y": 37.88,
+      "width": 65,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "e8a9ebc6-cf39-46ce-ad4e-1455172ce7ac",
+      "zone_id": "6bf38218-b601-43e0-afc7-99c405705820",
+      "table_number": 302,
+      "name": "Tavolo 302",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 29.52,
+      "pos_y": 122.54,
+      "width": 65,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "7aa47649-9508-489b-bde3-29d6c19e10e6",
+      "zone_id": "6bf38218-b601-43e0-afc7-99c405705820",
+      "table_number": 303,
+      "name": "Tavolo 303",
+      "capacity": 2,
+      "rotation": 0,
+      "pos_x": 171.53,
+      "pos_y": 29.79,
+      "width": 42,
+      "height": 42,
+      "status": "libero"
+    },
+    {
+      "id": "c505f806-7de4-462f-abc8-2702b2c57e72",
+      "zone_id": "6bf38218-b601-43e0-afc7-99c405705820",
+      "table_number": 304,
+      "name": "Tavolo 304",
+      "capacity": 2,
+      "rotation": 0,
+      "pos_x": 173.91,
+      "pos_y": 125.09,
+      "width": 42,
+      "height": 42,
+      "status": "libero"
+    },
+    {
+      "id": "5f28d885-e3eb-46fc-ab5d-bff8609e7c95",
+      "zone_id": "ff100040-167e-4fc9-bb59-1cad8fc0d00b",
+      "table_number": 401,
+      "name": "Tavolo 401",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 93.26,
+      "pos_y": 34.03,
+      "width": 45,
+      "height": 55,
+      "status": "libero"
+    },
+    {
+      "id": "bd95d315-21c5-4de8-b96a-306c08f2349b",
+      "zone_id": "ff100040-167e-4fc9-bb59-1cad8fc0d00b",
+      "table_number": 402,
+      "name": "Tavolo 402",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 91.79,
+      "pos_y": 109.92,
+      "width": 65,
+      "height": 45,
+      "status": "libero"
+    },
+    {
+      "id": "432d4ef0-83c9-414c-adc3-83a520f35a02",
+      "zone_id": "dc103487-8842-4528-92c0-7d866aa6ebcf",
+      "table_number": 501,
+      "name": "Tavolo 501",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 32.02,
+      "pos_y": 113.21,
+      "width": 45,
+      "height": 65,
+      "status": "libero"
+    },
+    {
+      "id": "ef6440ac-5c7d-44f5-a59b-9c2f25d01b59",
+      "zone_id": "dc103487-8842-4528-92c0-7d866aa6ebcf",
+      "table_number": 502,
+      "name": "Tavolo 502",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 125.29,
+      "pos_y": 17.94,
+      "width": 55,
+      "height": 55,
+      "status": "libero"
+    },
+    {
+      "id": "afa9a0b5-e92e-491c-a61a-5b6799abb2b5",
+      "zone_id": "dc103487-8842-4528-92c0-7d866aa6ebcf",
+      "table_number": 503,
+      "name": "Tavolo 503",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 165.05,
+      "pos_y": 133.56,
+      "width": 55,
+      "height": 55,
+      "status": "libero"
+    },
+    {
+      "id": "8f607704-ba12-4073-a204-5ff9fcf3e6a0",
+      "zone_id": "dc103487-8842-4528-92c0-7d866aa6ebcf",
+      "table_number": 504,
+      "name": "Tavolo 504",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 92.21,
+      "pos_y": 242.56,
+      "width": 45,
+      "height": 65,
+      "status": "libero"
+    },
+    {
+      "id": "44bd8356-3b3a-4beb-88f8-fb2a4d89beb8",
+      "zone_id": "dc103487-8842-4528-92c0-7d866aa6ebcf",
+      "table_number": 505,
+      "name": "Tavolo 505",
+      "capacity": 4,
+      "rotation": 0,
+      "pos_x": 92.97,
+      "pos_y": 363.16,
+      "width": 45,
+      "height": 65,
+      "status": "libero"
+    },
+    {
+      "id": "801c1434-64e5-4286-b330-12dc27e235b6",
+      "zone_id": "dc103487-8842-4528-92c0-7d866aa6ebcf",
+      "table_number": 506,
+      "name": "Tavolo 506",
+      "capacity": 6,
+      "rotation": 0,
+      "pos_x": 78.58,
+      "pos_y": 564.17,
+      "width": 110,
+      "height": 72,
+      "status": "libero"
+    },
+    {
+      "id": "a1a4a2a1-7fdd-495d-9b1a-3a6af9c35060",
+      "zone_id": "dc103487-8842-4528-92c0-7d866aa6ebcf",
+      "table_number": 507,
+      "name": "Tavolo 507",
+      "capacity": 2,
+      "rotation": 0,
+      "pos_x": 97.81,
+      "pos_y": 470.09,
+      "width": 42,
+      "height": 42,
+      "status": "libero"
+    }
+  ],
+  "menu": {
+    "categories": [
+      {
+        "id": "00000000-0000-0000-0000-000000000101",
+        "name": "ANTIPASTI",
+        "display_order": 1,
+        "items": [
+          {
+            "id": "c2c675e0-08e6-4441-8312-f6fd2d66a262",
+            "name": "Fagioli alla romana",
+            "category": "ANTIPASTI",
+            "price": 5,
+            "is_available": true
+          },
+          {
+            "id": "bfa9399f-eca3-41f9-a5eb-7a6e5ea53bd3",
+            "name": "Supplì",
+            "category": "ANTIPASTI",
+            "price": 2.5,
+            "is_available": true
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000102",
+        "name": "PRIMI",
+        "display_order": 2,
+        "items": [
+          {
+            "id": "86313b2e-3910-47ce-8340-c48c4bacc5e8",
+            "name": "Cacio e Pepe",
+            "category": "PRIMI",
+            "price": 10,
+            "is_available": true
+          },
+          {
+            "id": "228ec801-4649-4a66-8c43-0b567a78f4ce",
+            "name": "Carbonara",
+            "category": "PRIMI",
+            "price": 12,
+            "is_available": true
+          },
+          {
+            "id": "437ecd8a-4b10-4d4f-bd43-824659ebc260",
+            "name": "Gricia",
+            "category": "PRIMI",
+            "price": 11,
+            "is_available": false
+          },
+          {
+            "id": "ac90417a-cd67-48f5-a6f2-d30b5320c07d",
+            "name": "pasta alla norma",
+            "category": "PRIMI",
+            "price": 15,
+            "is_available": true
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000103",
+        "name": "SECONDI",
+        "display_order": 3,
+        "items": [
+          {
+            "id": "4884ca93-c8b0-4155-8045-f0a1daa6b6b6",
+            "name": "Arrosto",
+            "category": "SECONDI",
+            "price": 13,
+            "is_available": true
+          },
+          {
+            "id": "c26e04b5-884a-4f17-ac97-9b88fa4d6b93",
+            "name": "Coda alla vaccinara",
+            "category": "SECONDI",
+            "price": 14,
+            "is_available": true
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000104",
+        "name": "BEVANDE",
+        "display_order": 4,
+        "items": [
+          {
+            "id": "8ddc3899-1bd7-4aab-b1f6-de788e852a61",
+            "name": "Acqua",
+            "category": "BEVANDE",
+            "price": 2,
+            "is_available": true
+          },
+          {
+            "id": "6310f604-e961-4540-8017-e37847294fd3",
+            "name": "Coca Cola",
+            "category": "BEVANDE",
+            "price": 3,
+            "is_available": true
+          }
+        ]
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000105",
+        "name": "VINO",
+        "display_order": 5,
+        "items": [
+          {
+            "id": "330dc3a0-35f8-4af6-ad39-f417960f0809",
+            "name": "Barolo",
+            "category": "BEVANDE/VINO",
+            "price": 35,
+            "is_available": true
+          },
+          {
+            "id": "1058fec0-580f-4163-a401-3056beb89231",
+            "name": "Chianti",
+            "category": "BEVANDE/VINO",
+            "price": 18,
+            "is_available": true
+          },
+          {
+            "id": "b28e022c-e324-40a2-a5eb-57e857d4bf1a",
+            "name": "Vino della casa",
+            "category": "BEVANDE/VINO",
+            "price": 8,
+            "is_available": true
+          }
+        ]
+      },
+      {
+        "id": "a3854bb1-97b4-4d2c-9b68-3e2b7052b266",
+        "name": "DOLCI",
+        "display_order": 6,
+        "items": [
+          {
+            "id": "94dc36ff-89f2-40ec-b00a-4536725bc8b8",
+            "name": "Tiramisu",
+            "category": "DOLCI",
+            "price": 5,
+            "is_available": true
+          }
+        ]
+      }
+    ]
+  },
+  "active_orders": [
+    {
+      "id": "c0c6c8a6-9026-4665-b54b-e3429ac47ad6",
+      "table_id": "72dc02cc-a7ee-46ae-9f20-8ca7528fb7b4",
+      "table_name": "Tavolo 103",
+      "waiter_name": "Damiano",
+      "status": "READY",
+      "created_at": "2026-10-30T21:10:00.000000+00:00",
+      "time": "22:10",
+      "total": 44,
+      "items": [
+        {
+          "menu_item_id": "bfa9399f-eca3-41f9-a5eb-7a6e5ea53bd3",
+          "name": "Supplì",
+          "quantity": 2,
+          "unit_price": 2.5,
+          "line_total": 5,
+          "notes": "",
+          "status": "READY"
+        },
+        {
+          "menu_item_id": "c2c675e0-08e6-4441-8312-f6fd2d66a262",
+          "name": "Fagioli alla romana",
+          "quantity": 1,
+          "unit_price": 5,
+          "line_total": 5,
+          "notes": "",
+          "status": "READY"
+        },
+        {
+          "menu_item_id": "228ec801-4649-4a66-8c43-0b567a78f4ce",
+          "name": "Carbonara",
+          "quantity": 2,
+          "unit_price": 12,
+          "line_total": 24,
+          "notes": "",
+          "status": "READY"
+        },
+        {
+          "menu_item_id": "86313b2e-3910-47ce-8340-c48c4bacc5e8",
+          "name": "Cacio e Pepe",
+          "quantity": 1,
+          "unit_price": 10,
+          "line_total": 10,
+          "notes": "",
+          "status": "READY"
+        }
+      ]
+    },
+    {
+      "id": "51f2df7a-7797-4da7-bc2c-8d2f65796f25",
+      "table_id": "4f0f93d4-3bb0-4821-b0ae-2cdc54b7fe72",
+      "table_name": "Tavolo 101",
+      "waiter_name": "Damiano",
+      "status": "PENDING",
+      "created_at": "2026-10-30T20:15:00.000000+00:00",
+      "time": "21:15",
+      "total": 22.5,
+      "items": [
+        {
+          "menu_item_id": "bfa9399f-eca3-41f9-a5eb-7a6e5ea53bd3",
+          "name": "Supplì",
+          "quantity": 1,
+          "unit_price": 2.5,
+          "line_total": 2.5,
+          "notes": "",
+          "status": "PENDING"
+        },
+        {
+          "menu_item_id": "c2c675e0-08e6-4441-8312-f6fd2d66a262",
+          "name": "Fagioli alla romana",
+          "quantity": 2,
+          "unit_price": 5,
+          "line_total": 10,
+          "notes": "",
+          "status": "PENDING"
+        },
+        {
+          "menu_item_id": "86313b2e-3910-47ce-8340-c48c4bacc5e8",
+          "name": "Cacio e Pepe",
+          "quantity": 1,
+          "unit_price": 10,
+          "line_total": 10,
+          "notes": "",
+          "status": "PENDING"
+        }
+      ]
+    },
+    {
+      "id": "c8a1fe15-8dfa-439c-baac-fb13fa6ebb4d",
+      "table_id": "477fb8a7-fe65-414c-8774-b2f4a78df1ee",
+      "table_name": "Tavolo 102",
+      "waiter_name": "Giulia",
+      "status": "PENDING",
+      "created_at": "2026-10-30T20:40:00.000000+00:00",
+      "time": "21:40",
+      "total": 79,
+      "items": [
+        {
+          "menu_item_id": "c2c675e0-08e6-4441-8312-f6fd2d66a262",
+          "name": "Fagioli alla romana",
+          "quantity": 2,
+          "unit_price": 5,
+          "line_total": 10,
+          "notes": "",
+          "status": "PENDING"
+        },
+        {
+          "menu_item_id": "228ec801-4649-4a66-8c43-0b567a78f4ce",
+          "name": "Carbonara",
+          "quantity": 1,
+          "unit_price": 12,
+          "line_total": 12,
+          "notes": "",
+          "status": "PENDING"
+        },
+        {
+          "menu_item_id": "ac90417a-cd67-48f5-a6f2-d30b5320c07d",
+          "name": "pasta alla norma",
+          "quantity": 1,
+          "unit_price": 15,
+          "line_total": 15,
+          "notes": "",
+          "status": "PENDING"
+        },
+        {
+          "menu_item_id": "86313b2e-3910-47ce-8340-c48c4bacc5e8",
+          "name": "Cacio e Pepe",
+          "quantity": 1,
+          "unit_price": 10,
+          "line_total": 10,
+          "notes": "",
+          "status": "PENDING"
+        },
+        {
+          "menu_item_id": "4884ca93-c8b0-4155-8045-f0a1daa6b6b6",
+          "name": "Arrosto",
+          "quantity": 1,
+          "unit_price": 13,
+          "line_total": 13,
+          "notes": "",
+          "status": "PENDING"
+        },
+        {
+          "menu_item_id": "c26e04b5-884a-4f17-ac97-9b88fa4d6b93",
+          "name": "Coda alla vaccinara",
+          "quantity": 1,
+          "unit_price": 14,
+          "line_total": 14,
+          "notes": "",
+          "status": "PENDING"
+        },
+        {
+          "menu_item_id": "94dc36ff-89f2-40ec-b00a-4536725bc8b8",
+          "name": "Tiramisu",
+          "quantity": 1,
+          "unit_price": 5,
+          "line_total": 5,
+          "notes": "",
+          "status": "PENDING"
+        }
+      ]
+    }
+  ],
+  "reservations": [
+    {
+      "id": "res-valerio",
+      "name": "valerio",
+      "time": "22:00",
+      "covers": 30,
+      "phone": "+39 335 123 4567",
+      "status": "IN ATTESA",
+      "tableNumbers": [501, 502, 503, 504, 505, 506, 507]
+    },
+    {
+      "id": "res-damiano",
+      "name": "damiano",
+      "time": "22:00",
+      "covers": 15,
+      "phone": "+39 335 123 4567",
+      "status": "IN ATTESA",
+      "tableNumbers": [301, 302, 303, 304]
+    }
+  ],
+  "weekly_traffic": [
+    { "day": "Lun", "orders": 12 },
+    { "day": "Mar", "orders": 14 },
+    { "day": "Mer", "orders": 16 },
+    { "day": "Gio", "orders": 22 },
+    { "day": "Ven", "orders": 42 },
+    { "day": "Sab", "orders": 58, "peak": true },
+    { "day": "Dom", "orders": 36 }
+  ]
+}
