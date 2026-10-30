@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 const STORAGE_KEY = 'orma_cookie_consent'
-const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-J3NG91KYT9'
+const GA_MEASUREMENT_ID = 'G-J3NG91KYT9'
 
 function ensureGtag() {
   window.dataLayer = window.dataLayer || []
@@ -18,12 +18,12 @@ function loadAnalytics() {
   if (!document.querySelector('script[data-orma-ga]')) {
     const script = document.createElement('script')
     script.async = true
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
-    script.dataset.ormaGa = GA_ID
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
+    script.dataset.ormaGa = GA_MEASUREMENT_ID
     document.head.appendChild(script)
   }
   window.gtag('js', new Date())
-  window.gtag('config', GA_ID)
+  window.gtag('config', GA_MEASUREMENT_ID)
 }
 
 export default function CookieBanner() {
