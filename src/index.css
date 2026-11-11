@@ -78,6 +78,38 @@
   .btn-secondary:hover {
     @apply border-white/15 bg-white/[0.03] text-ink;
   }
+
+  /* Micro-interazioni dei bottoni */
+  .btn-primary {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.14) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:active,
+  .btn-secondary:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  @media (hover: hover) {
+    .btn-primary:hover::after {
+      transform: translateX(120%);
+    }
+  }
 }
 
 @layer utilities {
@@ -96,6 +128,162 @@
   }
 }
 
+/* Sfondo: deriva CSS per il livello lite */
+@keyframes liquid-drift {
+  from {
+    translate: -4% -3%;
+    scale: 1;
+  }
+  to {
+    translate: 5% 6%;
+    scale: 1.12;
+  }
+}
+
+.liquid-drift-a {
+  animation: liquid-drift 26s ease-in-out infinite alternate;
+}
+
+.liquid-drift-b {
+  animation: liquid-drift 34s ease-in-out -8s infinite alternate-reverse;
+}
+
+.liquid-drift-c {
+  animation: liquid-drift 30s ease-in-out -15s infinite alternate;
+}
+
+/* Card: bordo luminoso che segue il puntatore */
+.glass-spot::before,
+.glass-spot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.glass-spot::before {
+  z-index: 20;
+  padding: 1px;
+  background: radial-gradient(
+    240px circle at var(--mx, 50%) var(--my, 0%),
+    rgba(94, 106, 210, 0.9),
+    rgba(62, 224, 162, 0.35) 45%,
+    transparent 70%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.glass-spot::after {
+  background: radial-gradient(
+    420px circle at var(--mx, 50%) var(--my, 0%),
+    rgba(94, 106, 210, 0.1),
+    transparent 60%
+  );
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .glass-spot:hover::before,
+  .glass-spot:hover::after {
+    opacity: 1;
+  }
+}
+
+/* Connettore animato tra i nodi di sincronizzazione */
+.sync-line {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sync-line::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 45%;
+  background: linear-gradient(180deg, transparent, #5e6ad2, #3ee0a2, transparent);
+  animation: sync-flow-y 2.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@media (min-width: 768px) {
+  .sync-line::after {
+    inset: 0 auto 0 0;
+    width: 45%;
+    height: auto;
+    background: linear-gradient(90deg, transparent, #5e6ad2, #3ee0a2, transparent);
+    animation-name: sync-flow-x;
+  }
+}
+
+@keyframes sync-flow-y {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(230%);
+  }
+}
+
+@keyframes sync-flow-x {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(230%);
+  }
+}
+
+html[data-motion='static'] .sync-line::after {
+  display: none;
+}
+
+/* Reveal allo scroll */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+}
+
+[data-reveal][data-revealed] {
+  opacity: 1;
+  transform: none;
+}
+
+html[data-motion='lite'] [data-reveal] {
+  transform: none;
+  transition-duration: 0.4s;
+}
+
+html[data-motion='static'] [data-reveal] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* Ingresso pagina, solo su navigazione client */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.page-enter {
+  animation: page-enter 0.45s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+html[data-motion='static'] .page-enter {
+  animation: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -104,5 +292,10 @@
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
   }
 }

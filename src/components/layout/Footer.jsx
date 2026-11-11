@@ -1,13 +1,8 @@
 import { useState } from 'react'
+import { Link } from 'react-router'
+import { FOOTER_COLUMNS } from '../../config/site'
 import PrivacyPolicyModal from '../legal/PrivacyPolicyModal'
-import { Logo } from './Navbar'
-
-const NAVIGATION = [
-  { label: 'Planimetria Live', href: '#flussi' },
-  { label: 'KDS Cucina', href: '#prodotto' },
-  { label: 'Gestione Menu', href: '#flussi' },
-  { label: 'Analytics & Margini', href: '#flussi' },
-]
+import Logo from '../ui/Logo'
 
 export default function Footer() {
   const [privacyOpen, setPrivacyOpen] = useState(false)
@@ -15,51 +10,30 @@ export default function Footer() {
   return (
     <footer className="border-t border-line">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
-          <div>
+        <div className="grid gap-12 sm:grid-cols-3 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div className="sm:col-span-3 md:col-span-1">
             <Logo wordmark="Orma" />
             <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-muted">
               Il sistema operativo essenziale per la ristorazione.
             </p>
           </div>
 
-          <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-faint">
-              Navigazione
-            </p>
-            <ul className="mt-4 space-y-2.5">
-              {NAVIGATION.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-[13px] text-muted transition hover:text-ink">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-faint">
-              Prodotto
-            </p>
-            <ul className="mt-4 space-y-2.5">
-              <li>
-                <a href="#contatti" className="text-[13px] text-muted transition hover:text-ink">
-                  Contattaci
-                </a>
-              </li>
-              <li>
-                <a href="#contatti" className="text-[13px] text-muted transition hover:text-ink">
-                  Richiedi Demo
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="text-[13px] text-muted transition hover:text-ink">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
+          {FOOTER_COLUMNS.map((column) => (
+            <div key={column.title}>
+              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-faint">
+                {column.title}
+              </p>
+              <ul className="mt-4 space-y-2.5">
+                {column.links.map((link) => (
+                  <li key={link.label}>
+                    <Link to={link.to} className="text-[13px] text-muted transition hover:text-ink">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">

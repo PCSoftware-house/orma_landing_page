@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Orma è il gestionale per la ristorazione: sito, prenotazioni, sala e cucina in un'unica piattaforma."
-    />
+    <meta name="description" content="Orma è il gestionale per la ristorazione: sito, prenotazioni, sala e cucina in un'unica piattaforma." />
     <meta name="theme-color" content="#08090a" />
     <title>Orma — Il gestionale per la ristorazione</title>
+    <link rel="canonical" href="https://getorma.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="Orma" />
+    <meta property="og:title" content="Orma — Il gestionale per la ristorazione" />
+    <meta property="og:description" content="Orma è il gestionale per la ristorazione: sito, prenotazioni, sala e cucina in un'unica piattaforma." />
+    <meta property="og:url" content="https://getorma.app/" />
     <!-- Google Consent Mode v2 -->
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -21,9 +25,10 @@
       });
     </script>
     <script>
+      try { sessionStorage.removeItem('orma-scroll') } catch (e) {}
       if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
       function pinTop() {
-        if (location.hash) history.replaceState(null, '', location.pathname + location.search)
+        if (location.hash) history.replaceState(history.state, '', location.pathname + location.search)
         scrollTo(0, 0)
       }
       pinTop()
@@ -36,7 +41,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
