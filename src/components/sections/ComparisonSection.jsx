@@ -1,3 +1,5 @@
+import Reveal from '../ui/Reveal'
+
 const ROWS = [
   {
     title: 'Presenza Web & Traffico Pubblicitario',
@@ -21,19 +23,21 @@ const ROWS = [
 export default function ComparisonSection() {
   return (
     <section id="confronto" className="mx-auto max-w-6xl px-4 pb-28 sm:px-6">
-      <div className="max-w-2xl">
+      <Reveal className="max-w-2xl">
         <h2 className="text-3xl font-medium tracking-[-0.04em] text-ink sm:text-4xl">
           La differenza tra rincorrere il locale e averne il controllo.
         </h2>
         <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-muted">
           Vedi cosa cambia concretamente durante il servizio di ogni giorno.
         </p>
-      </div>
+      </Reveal>
 
       <div className="mt-12 grid gap-4 lg:grid-cols-3">
-        {ROWS.map((row) => (
-          <article
+        {ROWS.map((row, index) => (
+          <Reveal
+            as="article"
             key={row.title}
+            delay={index * 80}
             className="flex flex-col rounded-xl border border-[#27272A] bg-[#18181B] p-5"
           >
             <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-ink">{row.title}</h3>
@@ -47,7 +51,7 @@ export default function ComparisonSection() {
               </p>
               <p className="mt-2 text-[14px] leading-relaxed text-[#FAFAFA]">{row.next}</p>
             </div>
-          </article>
+          </Reveal>
         ))}
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
+import Reveal from '../ui/Reveal'
 
 const QUESTIONS = [
   {
@@ -25,8 +26,13 @@ export default function FaqSection({ title = 'Domande frequenti', items = QUESTI
 
   return (
     <section id="faq" className="mx-auto max-w-6xl px-4 pb-28 sm:px-6">
-      <h2 className="text-3xl font-medium tracking-[-0.04em] text-ink sm:text-4xl">{title}</h2>
-      <div className="mt-10 max-w-3xl divide-y divide-[#27272A] overflow-hidden rounded-xl border border-[#27272A] bg-[#18181B]">
+      <Reveal as="h2" className="text-3xl font-medium tracking-[-0.04em] text-ink sm:text-4xl">
+        {title}
+      </Reveal>
+      <Reveal
+        delay={80}
+        className="mt-10 max-w-3xl divide-y divide-[#27272A] overflow-hidden rounded-xl border border-[#27272A] bg-[#18181B]"
+      >
         {items.map((item, index) => {
           const expanded = open === index
           return (
@@ -51,7 +57,7 @@ export default function FaqSection({ title = 'Domande frequenti', items = QUESTI
             </div>
           )
         })}
-      </div>
+      </Reveal>
     </section>
   )
 }

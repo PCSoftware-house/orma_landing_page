@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal from '../ui/Reveal'
 
 const HOURLY_RATE = 11.5
 
@@ -140,14 +141,14 @@ export default function ROIWidget() {
 export function SavingsSection() {
   return (
     <section id="risparmio" className="mx-auto max-w-6xl px-4 pb-28 sm:px-6">
-      <div className="max-w-2xl">
+      <Reveal className="max-w-2xl">
         <h2 className="text-3xl font-medium tracking-[-0.04em] text-ink sm:text-4xl">
           Fai due conti: quanto ti costa gestire tutto a mano?
         </h2>
-      </div>
-      <div className="mt-12">
+      </Reveal>
+      <Reveal delay={80} className="mt-12">
         <ROIWidget />
-      </div>
+      </Reveal>
     </section>
   )
 }

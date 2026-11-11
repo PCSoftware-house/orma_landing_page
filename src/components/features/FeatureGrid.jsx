@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Globe, QrCode, Smartphone } from 'lucide-react'
 import dataset from '../../data/mock_dataset.json'
 import GlassCard from '../ui/GlassCard'
+import Reveal from '../ui/Reveal'
 import WindowHeader from '../ui/WindowHeader'
 
 const WEEK = dataset.weekly_traffic
@@ -236,7 +237,7 @@ const CARDS = [
 export default function FeatureGrid() {
   return (
     <section id="flussi" className="mx-auto max-w-6xl px-4 pb-28 sm:px-6">
-      <div className="mb-12 max-w-2xl">
+      <Reveal className="mb-12 max-w-2xl">
         <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-faint">
           Piattaforma essenziale
         </p>
@@ -247,20 +248,22 @@ export default function FeatureGrid() {
           Niente centralini complessi o funzioni inutili. Soltanto gli strumenti che servono
           davvero per far girare la tua sala e proteggere i tuoi margini.
         </p>
-      </div>
+      </Reveal>
 
       <div className="grid items-stretch gap-4 md:grid-cols-2">
-        {CARDS.map((card) => (
-          <GlassCard key={card.title} className="flex h-full flex-col">
-            <WindowHeader dense />
-            <div className="flex flex-1 flex-col p-5">
-              <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-ink">{card.title}</h3>
-              <p className="mt-2 text-[13px] leading-relaxed text-muted">{card.body}</p>
-              <div className="mt-4 flex flex-1 flex-col">
-                <card.Widget />
+        {CARDS.map((card, index) => (
+          <Reveal key={card.title} delay={(index % 2) * 80} className="h-full">
+            <GlassCard interactive className="flex h-full flex-col">
+              <WindowHeader dense />
+              <div className="flex flex-1 flex-col p-5">
+                <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-ink">{card.title}</h3>
+                <p className="mt-2 text-[13px] leading-relaxed text-muted">{card.body}</p>
+                <div className="mt-4 flex flex-1 flex-col">
+                  <card.Widget />
+                </div>
               </div>
-            </div>
-          </GlassCard>
+            </GlassCard>
+          </Reveal>
         ))}
       </div>
     </section>
