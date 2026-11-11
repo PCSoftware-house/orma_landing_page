@@ -1,3 +1,4 @@
+import { Store } from 'lucide-react'
 import { Fragment } from 'react'
 import { SYNC } from '../../data/websites'
 import GlassCard from '../ui/GlassCard'
@@ -26,6 +27,12 @@ function Node({ node }) {
 export default function SyncFlow() {
   return (
     <section className="mx-auto max-w-6xl px-4 pb-28 sm:px-6">
+      <Reveal className="mb-5 flex">
+        <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-[12px] font-medium text-ink">
+          <Store size={13} strokeWidth={1.5} aria-hidden="true" className="text-accent" />
+          {SYNC.badge}
+        </span>
+      </Reveal>
       <Reveal>
         <SectionHeading eyebrow={SYNC.eyebrow} title={SYNC.title} body={SYNC.body} />
       </Reveal>

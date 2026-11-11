@@ -33,7 +33,7 @@ export const FOOTER_COLUMNS = [
   {
     title: 'Azienda',
     links: [
-      { label: 'Siti web per locali', to: '/websites' },
+      { label: 'Siti web su misura', to: '/websites' },
       { label: 'Chi siamo', to: '/about' },
     ],
   },
@@ -61,9 +61,9 @@ export const SEO = {
       "Orma è il gestionale per la ristorazione: sito, prenotazioni, sala e cucina in un'unica piattaforma.",
   },
   '/websites': {
-    title: 'Siti web per ristoranti e locali — Orma',
+    title: 'Siti web su misura per studi, brand e aziende — Orma',
     description:
-      'Siti web su misura per ristoranti, bar e locali: prenotazioni ed eventi integrati, menu digitale sempre aggiornato e sincronizzazione nativa con il gestionale Orma.',
+      'Siti web custom, veloci e 100% indipendenti per qualsiasi settore. Per i locali, integrazione opzionale con il gestionale Orma.',
   },
   '/about': {
     title: "PC Software — Software house per l'hospitality",

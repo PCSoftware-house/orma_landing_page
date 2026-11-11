@@ -53,8 +53,8 @@ export const ECOSYSTEM = [
   {
     id: 'websites',
     icon: Globe,
-    title: 'Siti web per locali',
-    body: 'Siti su misura con prenotazioni, eventi e menu sincronizzati con Orma.',
+    title: 'Siti web su misura',
+    body: 'Siti custom per studi, brand, aziende e locali, con integrazione Orma opzionale.',
     to: '/websites',
     cta: 'Scopri i siti web',
   },

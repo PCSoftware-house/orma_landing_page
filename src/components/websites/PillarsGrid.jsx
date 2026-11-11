@@ -9,7 +9,7 @@ export default function PillarsGrid() {
       <Reveal>
         <SectionHeading {...PILLARS_INTRO} />
       </Reveal>
-      <div className="grid items-stretch gap-4 md:grid-cols-2">
+      <div className="grid items-stretch gap-4 md:grid-cols-3">
         {PILLARS.map((pillar, index) => {
           const Icon = pillar.icon
           return (
