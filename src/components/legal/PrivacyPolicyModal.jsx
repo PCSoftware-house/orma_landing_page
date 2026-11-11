@@ -42,7 +42,8 @@ export default function PrivacyPolicyModal({ open, onClose }) {
         </div>
         <div className="mt-4 space-y-3 text-[13px] leading-relaxed text-muted">
           <p>
-            Questo sito è una landing page dimostrativa gestita da PC Software per il progetto Orma.
+            Questo sito è gestito da PC Software e presenta Orma, i servizi di sviluppo web per
+            locali e le soluzioni su misura per l&apos;hospitality.
           </p>
           <p>
             I dati inviati tramite i canali di contatto sono usati esclusivamente per rispondere alle
