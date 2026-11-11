@@ -195,6 +195,54 @@
   }
 }
 
+/* Connettore animato tra i nodi di sincronizzazione */
+.sync-line {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sync-line::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 45%;
+  background: linear-gradient(180deg, transparent, #5e6ad2, #3ee0a2, transparent);
+  animation: sync-flow-y 2.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@media (min-width: 768px) {
+  .sync-line::after {
+    inset: 0 auto 0 0;
+    width: 45%;
+    height: auto;
+    background: linear-gradient(90deg, transparent, #5e6ad2, #3ee0a2, transparent);
+    animation-name: sync-flow-x;
+  }
+}
+
+@keyframes sync-flow-y {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(230%);
+  }
+}
+
+@keyframes sync-flow-x {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(230%);
+  }
+}
+
+html[data-motion='static'] .sync-line::after {
+  display: none;
+}
+
 /* Reveal allo scroll */
 [data-reveal] {
   opacity: 0;

@@ -20,6 +20,8 @@ export const router = createBrowserRouter([
     HydrateFallback: RouteFallback,
     children: [
       { index: true, Component: OrmaLandingPage },
+      { path: 'websites', lazy: lazyPage(() => import('./pages/WebsitesPage')) },
+      { path: 'about', lazy: lazyPage(() => import('./pages/AboutPage')) },
       { path: '*', lazy: lazyPage(() => import('./pages/NotFoundPage')) },
     ],
   },

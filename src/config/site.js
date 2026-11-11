@@ -1,8 +1,9 @@
 export const SITE = { origin: 'https://getorma.app', product: 'Orma', company: 'PC Software' }
 
 export const NAV = [
-  { to: '/#prodotto', label: 'Prodotto' },
-  { to: '/#flussi', label: 'Flussi' },
+  { to: '/', label: 'Orma', end: true },
+  { to: '/websites', label: 'Siti web' },
+  { to: '/about', label: 'Chi siamo' },
 ]
 
 export const CTA = {
@@ -27,6 +28,13 @@ export const FOOTER_COLUMNS = [
       { label: 'Contattaci', to: '/#contatti' },
       { label: 'Richiedi Demo', to: '/#contatti' },
       { label: 'FAQ', to: '/#faq' },
+    ],
+  },
+  {
+    title: 'Azienda',
+    links: [
+      { label: 'Siti web per locali', to: '/websites' },
+      { label: 'Chi siamo', to: '/about' },
     ],
   },
 ]

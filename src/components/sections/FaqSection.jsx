@@ -20,16 +20,14 @@ const QUESTIONS = [
   },
 ]
 
-export default function FaqSection() {
+export default function FaqSection({ title = 'Domande frequenti', items = QUESTIONS }) {
   const [open, setOpen] = useState(0)
 
   return (
     <section id="faq" className="mx-auto max-w-6xl px-4 pb-28 sm:px-6">
-      <h2 className="text-3xl font-medium tracking-[-0.04em] text-ink sm:text-4xl">
-        Domande frequenti
-      </h2>
+      <h2 className="text-3xl font-medium tracking-[-0.04em] text-ink sm:text-4xl">{title}</h2>
       <div className="mt-10 max-w-3xl divide-y divide-[#27272A] overflow-hidden rounded-xl border border-[#27272A] bg-[#18181B]">
-        {QUESTIONS.map((item, index) => {
+        {items.map((item, index) => {
           const expanded = open === index
           return (
             <div key={item.q}>

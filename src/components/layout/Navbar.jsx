@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ArrowRight, Menu, X } from 'lucide-react'
-import { Link, useLocation } from 'react-router'
+import { Link, NavLink, useLocation } from 'react-router'
 import { CTA, NAV } from '../../config/site'
 import Logo from '../ui/Logo'
 
@@ -36,13 +36,20 @@ export default function Navbar() {
 
           <nav className="ml-6 hidden items-center gap-1 md:flex" aria-label="Principale">
             {NAV.map((link) => (
-              <Link
+              <NavLink
                 key={link.to}
                 to={link.to}
-                className="rounded-md px-2.5 py-1.5 text-[13px] text-muted transition hover:bg-white/[0.04] hover:text-ink"
+                end={link.end}
+                className={({ isActive }) =>
+                  `rounded-md px-2.5 py-1.5 text-[13px] transition ${
+                    isActive
+                      ? 'bg-white/[0.06] text-ink'
+                      : 'text-muted hover:bg-white/[0.04] hover:text-ink'
+                  }`
+                }
               >
                 {link.label}
-              </Link>
+              </NavLink>
             ))}
           </nav>
 
@@ -72,14 +79,21 @@ export default function Navbar() {
           <div className="mt-2 rounded-2xl border border-line bg-canvas/95 p-2 shadow-window backdrop-blur-xl md:hidden">
             <nav className="flex flex-col" aria-label="Mobile">
               {NAV.map((link) => (
-                <Link
+                <NavLink
                   key={link.to}
                   to={link.to}
-                  className="rounded-lg px-3 py-2 text-[14px] text-muted transition hover:bg-white/[0.04] hover:text-ink"
+                  end={link.end}
+                  className={({ isActive }) =>
+                    `rounded-lg px-3 py-2 text-[14px] transition ${
+                      isActive
+                        ? 'bg-white/[0.06] text-ink'
+                        : 'text-muted hover:bg-white/[0.04] hover:text-ink'
+                    }`
+                  }
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
-                </Link>
+                </NavLink>
               ))}
             </nav>
             <div className="mt-2 border-t border-line p-2">
