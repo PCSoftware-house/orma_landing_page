@@ -1,13 +1,8 @@
 import { useState } from 'react'
+import { Link } from 'react-router'
+import { FOOTER_COLUMNS } from '../../config/site'
 import PrivacyPolicyModal from '../legal/PrivacyPolicyModal'
 import Logo from '../ui/Logo'
-
-const NAVIGATION = [
-  { label: 'Planimetria Live', href: '#flussi' },
-  { label: 'KDS Cucina', href: '#prodotto' },
-  { label: 'Gestione Menu', href: '#flussi' },
-  { label: 'Analytics & Margini', href: '#flussi' },
-]
 
 export default function Footer() {
   const [privacyOpen, setPrivacyOpen] = useState(false)
@@ -23,43 +18,22 @@ export default function Footer() {
             </p>
           </div>
 
-          <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-faint">
-              Navigazione
-            </p>
-            <ul className="mt-4 space-y-2.5">
-              {NAVIGATION.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-[13px] text-muted transition hover:text-ink">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-faint">
-              Prodotto
-            </p>
-            <ul className="mt-4 space-y-2.5">
-              <li>
-                <a href="#contatti" className="text-[13px] text-muted transition hover:text-ink">
-                  Contattaci
-                </a>
-              </li>
-              <li>
-                <a href="#contatti" className="text-[13px] text-muted transition hover:text-ink">
-                  Richiedi Demo
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="text-[13px] text-muted transition hover:text-ink">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
+          {FOOTER_COLUMNS.map((column) => (
+            <div key={column.title}>
+              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-faint">
+                {column.title}
+              </p>
+              <ul className="mt-4 space-y-2.5">
+                {column.links.map((link) => (
+                  <li key={link.label}>
+                    <Link to={link.to} className="text-[13px] text-muted transition hover:text-ink">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">

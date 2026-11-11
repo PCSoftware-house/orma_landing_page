@@ -1,19 +1,31 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowRight, Menu, X } from 'lucide-react'
+import { Link, useLocation } from 'react-router'
+import { CTA, NAV } from '../../config/site'
 import Logo from '../ui/Logo'
 
-const LINKS = [
-  { href: '#prodotto', label: 'Prodotto' },
-  { href: '#flussi', label: 'Flussi' },
-]
+function skipToContent(event) {
+  const main = document.getElementById('contenuto')
+  if (!main) return
+  event.preventDefault()
+  main.focus({ preventScroll: true })
+  main.scrollIntoView()
+}
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const { pathname } = useLocation()
+  const cta = CTA[pathname] ?? CTA['/']
+
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [pathname])
 
   return (
     <>
       <a
-        href="#prodotto"
+        href="#contenuto"
+        onClick={skipToContent}
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-md focus:bg-ink focus:px-3 focus:py-2 focus:text-canvas"
       >
         Vai al contenuto
@@ -23,26 +35,26 @@ export default function Navbar() {
           <Logo />
 
           <nav className="ml-6 hidden items-center gap-1 md:flex" aria-label="Principale">
-            {LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+            {NAV.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
                 className="rounded-md px-2.5 py-1.5 text-[13px] text-muted transition hover:bg-white/[0.04] hover:text-ink"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="ml-auto hidden items-center md:flex">
-            <a href="#contatti" className="btn-primary group">
-              Prova ora
+            <Link to={cta.to} className="btn-primary group">
+              {cta.label}
               <ArrowRight
                 size={14}
                 strokeWidth={1.5}
                 className="text-muted transition group-hover:translate-x-0.5 group-hover:text-ink"
               />
-            </a>
+            </Link>
           </div>
 
           <button
@@ -59,21 +71,21 @@ export default function Navbar() {
         {menuOpen ? (
           <div className="mt-2 rounded-2xl border border-line bg-canvas/95 p-2 shadow-window backdrop-blur-xl md:hidden">
             <nav className="flex flex-col" aria-label="Mobile">
-              {LINKS.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
+              {NAV.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
                   className="rounded-lg px-3 py-2 text-[14px] text-muted transition hover:bg-white/[0.04] hover:text-ink"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
             <div className="mt-2 border-t border-line p-2">
-              <a href="#contatti" className="btn-primary w-full" onClick={() => setMenuOpen(false)}>
-                Prova ora
-              </a>
+              <Link to={cta.to} className="btn-primary w-full" onClick={() => setMenuOpen(false)}>
+                {cta.label}
+              </Link>
             </div>
           </div>
         ) : null}

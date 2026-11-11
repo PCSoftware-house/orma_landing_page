@@ -1,3 +1,5 @@
+import { Link } from 'react-router'
+
 export function LogoMark({ className = 'h-5 w-5' }) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
@@ -27,9 +29,9 @@ export function LogoMark({ className = 'h-5 w-5' }) {
 
 export default function Logo({ className = '', wordmark = 'Orma' }) {
   return (
-    <a href="#prodotto" className={`inline-flex items-center gap-2 ${className}`}>
+    <Link to="/" className={`inline-flex items-center gap-2 ${className}`}>
       <LogoMark />
       <span className="text-[14px] font-medium tracking-tight text-ink">{wordmark}</span>
-    </a>
+    </Link>
   )
 }

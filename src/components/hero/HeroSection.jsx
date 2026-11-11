@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router'
 import MainAppWindow from './MainAppWindow'
 
 export default function HeroSection() {
@@ -18,17 +19,17 @@ export default function HeroSection() {
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5">
-          <a href="#contatti" className="btn-primary group !h-10 !px-4">
+          <Link to="/#contatti" className="btn-primary group !h-10 !px-4">
             Prova ora
             <ArrowRight
               size={14}
               strokeWidth={1.5}
               className="text-muted transition group-hover:translate-x-0.5 group-hover:text-ink"
             />
-          </a>
-          <a href="#contatti" className="btn-secondary !h-10 !px-4">
+          </Link>
+          <Link to="/#contatti" className="btn-secondary !h-10 !px-4">
             Richiedi una Demo
-          </a>
+          </Link>
         </div>
 
         <p className="mt-4 max-w-lg text-balance text-[12px] text-faint">

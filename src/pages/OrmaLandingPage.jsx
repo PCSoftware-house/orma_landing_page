@@ -4,8 +4,11 @@ import ComparisonSection from '../components/sections/ComparisonSection'
 import FaqSection from '../components/sections/FaqSection'
 import FinalCta from '../components/sections/FinalCta'
 import { SavingsSection } from '../components/sections/ROIWidget'
+import { useSeo } from '../hooks/useSeo'
 
 export default function OrmaLandingPage() {
+  useSeo('/')
+
   return (
     <>
       <HeroSection />

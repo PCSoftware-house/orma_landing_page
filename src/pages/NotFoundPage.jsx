@@ -1,6 +1,9 @@
 import { Link } from 'react-router'
+import { useNoIndex } from '../hooks/useSeo'
 
 export default function NotFoundPage() {
+  useNoIndex('Pagina non trovata — Orma')
+
   return (
     <section className="mx-auto max-w-6xl px-4 pb-28 pt-32 sm:px-6">
       <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
