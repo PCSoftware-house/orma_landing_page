@@ -21,9 +21,10 @@
       });
     </script>
     <script>
+      try { sessionStorage.removeItem('orma-scroll') } catch (e) {}
       if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
       function pinTop() {
-        if (location.hash) history.replaceState(null, '', location.pathname + location.search)
+        if (location.hash) history.replaceState(history.state, '', location.pathname + location.search)
         scrollTo(0, 0)
       }
       pinTop()

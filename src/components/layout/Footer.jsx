@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import PrivacyPolicyModal from '../legal/PrivacyPolicyModal'
-import { Logo } from './Navbar'
+import Logo from '../ui/Logo'
 
 const NAVIGATION = [
   { label: 'Planimetria Live', href: '#flussi' },

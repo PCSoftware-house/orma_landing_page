@@ -1,40 +1,11 @@
 import { useState } from 'react'
 import { ArrowRight, Menu, X } from 'lucide-react'
+import Logo from '../ui/Logo'
 
 const LINKS = [
   { href: '#prodotto', label: 'Prodotto' },
   { href: '#flussi', label: 'Flussi' },
 ]
-
-export function Logo({ className = '', wordmark = 'Orma' }) {
-  return (
-    <a href="#prodotto" className={`inline-flex items-center gap-2 ${className}`}>
-      <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
-        <rect
-          x="2.25"
-          y="2.25"
-          width="19.5"
-          height="19.5"
-          rx="6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          className="text-ink"
-        />
-        <path
-          d="M8 15.5V8.5h5.2"
-          fill="none"
-          stroke="#5e6ad2"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <circle cx="15.2" cy="15.2" r="1.35" fill="#3ee0a2" />
-      </svg>
-      <span className="text-[14px] font-medium tracking-tight text-ink">{wordmark}</span>
-    </a>
-  )
-}
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
